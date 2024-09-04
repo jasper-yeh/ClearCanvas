@@ -381,7 +381,7 @@ namespace ClearCanvas.Desktop.View.WinForms
 			_currentDesktop = null;
 			_desktops.Clear();
 
-			XmlElement desktops = DesktopViewSettingsXml["desktops"];
+			XmlElement desktops = DesktopViewSettingsXml?["desktops"];
 			if (desktops != null)
 			{
 				foreach (XmlElement desktop in desktops.ChildNodes)
