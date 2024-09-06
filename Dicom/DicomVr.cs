@@ -69,6 +69,8 @@ namespace ClearCanvas.Dicom
             _vrs.Add(OBvr.Name, OBvr);
             _vrs.Add(ODvr.Name, ODvr);
             _vrs.Add(OFvr.Name, OFvr);
+            _vrs.Add(OLvr.Name, OLvr);
+            _vrs.Add(OVvr.Name, OVvr);
             _vrs.Add(OWvr.Name, OWvr);
             _vrs.Add(PNvr.Name, PNvr);
             _vrs.Add(SHvr.Name, SHvr);
@@ -76,11 +78,15 @@ namespace ClearCanvas.Dicom
             _vrs.Add(SQvr.Name, SQvr);
             _vrs.Add(SSvr.Name, SSvr);
             _vrs.Add(STvr.Name, STvr);
+            _vrs.Add(SVvr.Name, SVvr);
             _vrs.Add(TMvr.Name, TMvr);
+            _vrs.Add(UCvr.Name, UCvr);
             _vrs.Add(UIvr.Name, UIvr);
             _vrs.Add(ULvr.Name, ULvr);
+            _vrs.Add(URvr.Name, URvr);
             _vrs.Add(USvr.Name, USvr);
             _vrs.Add(UTvr.Name, UTvr);
+            _vrs.Add(UVvr.Name, UVvr);
         }
 
         /// <summary>
@@ -205,7 +211,7 @@ namespace ClearCanvas.Dicom
                 return new DicomAttributeLT(tag, bb);
             });
         /// <summary>
-        /// The Other Byte String VR.
+        /// The Other Byte VR.
         /// </summary>
         public static readonly DicomVr OBvr = new DicomVr("OB", false, false, false, 1, false, '\0', 1,
             delegate(DicomTag tag, ByteBuffer bb)
@@ -215,7 +221,7 @@ namespace ClearCanvas.Dicom
                 return new DicomAttributeOB(tag, bb);
             });
         /// <summary>
-        /// The Other Double String VR.
+        /// The Other Double VR.
         /// </summary>
         public static readonly DicomVr ODvr = new DicomVr("OD", false, false, false, 8, false, '\0', 8,
             delegate(DicomTag tag, ByteBuffer bb)
@@ -225,7 +231,7 @@ namespace ClearCanvas.Dicom
                 return new DicomAttributeOD(tag, bb);
             });
         /// <summary>
-        /// The Other Float String VR.
+        /// The Other Float VR.
         /// </summary>
         public static readonly DicomVr OFvr = new DicomVr("OF", false, false, false, 4, false, '\0', 4,
             delegate(DicomTag tag, ByteBuffer bb)
@@ -235,7 +241,27 @@ namespace ClearCanvas.Dicom
                 return new DicomAttributeOF(tag, bb);
             });
         /// <summary>
-        /// The Other Word String VR.
+        /// The Other Long VR.
+        /// </summary>
+        public static readonly DicomVr OLvr = new DicomVr("OL", false, false, false, 4, false, '\0', 4,
+            delegate(DicomTag tag, ByteBuffer bb)
+            {
+                if (bb == null) return new DicomAttributeOL(tag);
+
+                return new DicomAttributeOL(tag, bb);
+            });
+        /// <summary>
+        /// The Other 64-bit Very Long VR.
+        /// </summary>
+        public static readonly DicomVr OVvr = new DicomVr("OV", false, false, false, 8, false, '\0', 8,
+            delegate(DicomTag tag, ByteBuffer bb)
+            {
+                if (bb == null) return new DicomAttributeOV(tag);
+
+                return new DicomAttributeOV(tag, bb);
+            });
+        /// <summary>
+        /// The Other Word VR.
         /// </summary>
         public static readonly DicomVr OWvr = new DicomVr("OW", false, false, false, 2, false, '\0', 2,
             delegate(DicomTag tag, ByteBuffer bb)
@@ -305,6 +331,16 @@ namespace ClearCanvas.Dicom
                 return new DicomAttributeST(tag, bb);
             });
         /// <summary>
+        /// The Signed 64-bit Very Long VR.
+        /// </summary>
+        public static readonly DicomVr SVvr = new DicomVr("SV", false, false, true, 8, true, '\0', 8,
+            delegate (DicomTag tag, ByteBuffer bb)
+            {
+                if (bb == null) return new DicomAttributeSV(tag);
+
+                return new DicomAttributeSV(tag, bb);
+            });
+        /// <summary>
         /// The Time VR.
         /// </summary>
         public static readonly DicomVr TMvr = new DicomVr("TM", true, false, true, 16, true, ' ', 1,
@@ -315,7 +351,17 @@ namespace ClearCanvas.Dicom
                 return new DicomAttributeTM(tag, bb);
             });
         /// <summary>
-        /// The Unique Identifer (UID) VR.
+        /// The Unlimited Characters VR.
+        /// </summary>
+        public static readonly DicomVr UCvr = new DicomVr("UC", true, true, true, 0, false, ' ', 1,
+            delegate(DicomTag tag, ByteBuffer bb)
+            {
+                if (bb == null) return new DicomAttributeUC(tag);
+
+                return new DicomAttributeUC(tag, bb);
+            });
+        /// <summary>
+        /// The Unique Identifier (UID) VR.
         /// </summary>
         public static readonly DicomVr UIvr = new DicomVr("UI", true, false, true, 64, true, '\0', 1,
             delegate(DicomTag tag, ByteBuffer bb)
@@ -345,6 +391,16 @@ namespace ClearCanvas.Dicom
                 return new DicomAttributeUN(tag, bb);
             });
         /// <summary>
+        /// The Universal Resource Identifier or Universal Resource Locator (URI/URL) VR.
+        /// </summary>
+        public static readonly DicomVr URvr = new DicomVr("UR", true, false, false, 0, false, ' ', 1,
+            delegate (DicomTag tag, ByteBuffer bb)
+            {
+                if (bb == null) return new DicomAttributeUR(tag);
+
+                return new DicomAttributeUR(tag, bb);
+            });
+        /// <summary>
         /// The Unsigned Short VR.
         /// </summary>
         public static readonly DicomVr USvr = new DicomVr("US", false, false, true, 2, true, '\0', 2,
@@ -363,6 +419,16 @@ namespace ClearCanvas.Dicom
                 if (bb == null) return new DicomAttributeUT(tag);
 
                 return new DicomAttributeUT(tag, bb);
+            });
+        /// <summary>
+        /// The Unsigned 64-bit Very Long VR.
+        /// </summary>
+        public static readonly DicomVr UVvr = new DicomVr("UV", false, false, true, 8, true, '\0', 8,
+            delegate (DicomTag tag, ByteBuffer bb)
+            {
+                if (bb == null) return new DicomAttributeUV(tag);
+
+                return new DicomAttributeUV(tag, bb);
             });
 
         internal static readonly DicomVr NONE = new DicomVr("NONE", false, false, false, 1, false, '\0', 1,

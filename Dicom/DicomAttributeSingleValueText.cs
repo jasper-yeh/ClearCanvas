@@ -309,6 +309,47 @@ namespace ClearCanvas.Dicom
 	#region DicomAttributeUT
 
 	/// <summary>
+	/// <see cref="DicomAttributeSingleValueText"/> derived class for storing UR value representation attributes.
+	/// </summary>
+	public class DicomAttributeUR : DicomAttributeSingleValueText
+	{
+		#region Constructors
+
+		public DicomAttributeUR(uint tag)
+			: base(tag) {}
+
+		public DicomAttributeUR(DicomTag tag)
+			: base(tag)
+		{
+			if (!tag.VR.Equals(DicomVr.URvr)
+			    && !tag.MultiVR)
+				throw new DicomException(SR.InvalidVR);
+		}
+
+		internal DicomAttributeUR(DicomTag tag, ByteBuffer item)
+			: base(tag, item) {}
+
+		internal DicomAttributeUR(DicomAttributeUR attrib)
+			: base(attrib) {}
+
+		#endregion
+
+		public override DicomAttribute Copy()
+		{
+			return new DicomAttributeUR(this);
+		}
+
+		internal override DicomAttribute Copy(bool copyBinary)
+		{
+			return new DicomAttributeUR(this);
+		}
+	}
+
+	#endregion
+
+	#region DicomAttributeUT
+
+	/// <summary>
 	/// <see cref="DicomAttributeSingleValueText"/> derived class for storing UT value representation attributes.
 	/// </summary>
 	public class DicomAttributeUT : DicomAttributeSingleValueText

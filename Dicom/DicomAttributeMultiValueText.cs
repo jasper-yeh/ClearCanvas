@@ -2206,6 +2206,54 @@ namespace ClearCanvas.Dicom
     }
     #endregion
 
+    #region DicomAttributeUC
+    /// <summary>
+    /// <see cref="DicomAttributeMultiValueText"/> derived class for storing UC value representation attributes.
+    /// </summary>
+    public class DicomAttributeUC : DicomAttributeMultiValueText
+    {
+        #region Constructors
+
+        public DicomAttributeUC(uint tag)
+            : base(tag)
+        {
+
+        }
+
+        public DicomAttributeUC(DicomTag tag)
+            : base(tag)
+        {
+            if (!tag.VR.Equals(DicomVr.UCvr)
+                && !tag.MultiVR)
+                throw new DicomException(SR.InvalidVR);
+        }
+
+        internal DicomAttributeUC(DicomTag tag, ByteBuffer item)
+            : base(tag, item)
+        {
+        }
+
+
+        internal DicomAttributeUC(DicomAttributeUC attrib)
+            : base(attrib)
+        {
+        }
+
+        #endregion
+
+        public override DicomAttribute Copy()
+        {
+            return new DicomAttributeUC(this);
+        }
+
+        internal override DicomAttribute Copy(bool copyBinary)
+        {
+            return new DicomAttributeUC(this);
+        }
+
+    }
+    #endregion
+
     #region DicomAttributeUI
     /// <summary>
     /// <see cref="DicomAttributeMultiValueText"/> derived class for storing UI value representation attributes.
