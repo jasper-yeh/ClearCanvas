@@ -1,6 +1,7 @@
 using System;
 
 // This file is auto-generated
+// ReSharper disable InconsistentNaming
 
 namespace ClearCanvas.Dicom
 {

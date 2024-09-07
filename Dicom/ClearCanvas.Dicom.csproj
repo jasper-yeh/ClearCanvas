@@ -118,6 +118,7 @@
     <Compile Include="DicomAttributeSQ.cs" />
     <Compile Include="DicomTagsLegacy.cs" />
     <Compile Include="DicomUids.cs" />
+    <Compile Include="DicomUidsLegacy.cs" />
     <Compile Include="DicomUncompressedPixelData.cs" />
     <Compile Include="FileReference.cs" />
     <Compile Include="Iod\ComponentGroup.cs" />

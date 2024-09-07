@@ -46,7 +46,10 @@ namespace ClearCanvas.Dicom
 		ApplicationContextName,
 		CodingScheme,
 		SynchronizationFrameOfReference,
-		Unknown
+		Unknown,
+        ApplicationHostingModel,
+        MappingResource,
+        LdapOid
 
 		// ReSharper restore InconsistentNaming
 	}
