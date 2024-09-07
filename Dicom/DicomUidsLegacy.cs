@@ -173,7 +173,7 @@ namespace ClearCanvas.Dicom
         /// </summary>
         public static DicomUid DigitalIntraoralXRayImageStorageForProcessing => DigitalIntraOralXRayImageStorageForProcessing;
         /// <summary>
-        /// <para>SOP Class: Ultrasound Multi-frame Image Storage</para>
+        /// <para>SOP Class: Ultrasound Multi-frame Image Storage (Retired)</para>
         /// <para>1.2.840.10008.5.1.4.1.1.3</para>
         /// <para>This UID has been retired. Refer to DICOM PS3 (1993).</para>
         /// </summary>

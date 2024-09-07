@@ -1289,12 +1289,12 @@ namespace ClearCanvas.Dicom
         /// </summary>
         public static readonly DicomUid LegacyConvertedEnhancedCTImageStorage = new DicomUid("1.2.840.10008.5.1.4.1.1.2.2", "Legacy Converted Enhanced CT Image Storage", UidType.SOPClass);
         /// <summary>
-        /// <para>SOP Class: Ultrasound Multi-frame Image Storage</para>
+        /// <para>SOP Class: Ultrasound Multi-frame Image Storage (Retired)</para>
         /// <para>1.2.840.10008.5.1.4.1.1.3</para>
         /// <para>This UID has been retired. Refer to DICOM PS3 (1993).</para>
         /// </summary>
         [Obsolete("This UID has been retired. Refer to DICOM PS3 (1993).")]
-        public static readonly DicomUid UltrasoundMultiFrameImageStorageRetired = new DicomUid("1.2.840.10008.5.1.4.1.1.3", "Ultrasound Multi-frame Image Storage", UidType.SOPClass);
+        public static readonly DicomUid UltrasoundMultiFrameImageStorageRetired = new DicomUid("1.2.840.10008.5.1.4.1.1.3", "Ultrasound Multi-frame Image Storage (Retired)", UidType.SOPClass);
         /// <summary>
         /// <para>SOP Class: Ultrasound Multi-frame Image Storage</para>
         /// <para>1.2.840.10008.5.1.4.1.1.3.1</para>
@@ -1326,19 +1326,19 @@ namespace ClearCanvas.Dicom
         /// </summary>
         public static readonly DicomUid LegacyConvertedEnhancedMRImageStorage = new DicomUid("1.2.840.10008.5.1.4.1.1.4.4", "Legacy Converted Enhanced MR Image Storage", UidType.SOPClass);
         /// <summary>
-        /// <para>SOP Class: Nuclear Medicine Image Storage</para>
+        /// <para>SOP Class: Nuclear Medicine Image Storage (Retired)</para>
         /// <para>1.2.840.10008.5.1.4.1.1.5</para>
         /// <para>This UID has been retired. Refer to DICOM PS3 (1993).</para>
         /// </summary>
         [Obsolete("This UID has been retired. Refer to DICOM PS3 (1993).")]
-        public static readonly DicomUid NuclearMedicineImageStorageRetired = new DicomUid("1.2.840.10008.5.1.4.1.1.5", "Nuclear Medicine Image Storage", UidType.SOPClass);
+        public static readonly DicomUid NuclearMedicineImageStorageRetired = new DicomUid("1.2.840.10008.5.1.4.1.1.5", "Nuclear Medicine Image Storage (Retired)", UidType.SOPClass);
         /// <summary>
-        /// <para>SOP Class: Ultrasound Image Storage</para>
+        /// <para>SOP Class: Ultrasound Image Storage (Retired)</para>
         /// <para>1.2.840.10008.5.1.4.1.1.6</para>
         /// <para>This UID has been retired. Refer to DICOM PS3 (1993).</para>
         /// </summary>
         [Obsolete("This UID has been retired. Refer to DICOM PS3 (1993).")]
-        public static readonly DicomUid UltrasoundImageStorageRetired = new DicomUid("1.2.840.10008.5.1.4.1.1.6", "Ultrasound Image Storage", UidType.SOPClass);
+        public static readonly DicomUid UltrasoundImageStorageRetired = new DicomUid("1.2.840.10008.5.1.4.1.1.6", "Ultrasound Image Storage (Retired)", UidType.SOPClass);
         /// <summary>
         /// <para>SOP Class: Ultrasound Image Storage</para>
         /// <para>1.2.840.10008.5.1.4.1.1.6.1</para>
