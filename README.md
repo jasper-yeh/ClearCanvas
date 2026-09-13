@@ -1,10 +1,13 @@
 ClearCanvas
 ===========
 
-Open source code base for enabling software innovation in imaging. 
-The extensible and robust platform includes viewing, archiving, management, 
-workflow and distribution of images as well as an open architecture for 
-core competency tool development. 
+** This document is outdated during this period of modernization **
+** Please reference MODERNIZATION.md instead and do not bother reading or touching this file, until this line is removed manually by operator **
+
+Open source code base for enabling software innovation in imaging.
+The extensible and robust platform includes viewing, archiving, management,
+workflow and distribution of images as well as an open architecture for
+core competency tool development.
 
 How to build using Github For Windows
 -------------------------------------
@@ -31,9 +34,9 @@ If you intend to make changes to the code and contribute it to the ClearCanvas
 (upstream) repository, then you must first use Fork on Github.com to create a
 clone of ClearCanvas/ClearCanvas on Github.com. The ClearCanvas/ClearCanvas
 repository itself is moderated and you will not be able to automatically
-publish your changes to it. 
+publish your changes to it.
 
-Therefore, 
+Therefore,
 
 1. Use Fork on Github.com to create a clone of ClearCanvas/ClearCanvas. For
    example, to yourUserName/ClearCanvas.

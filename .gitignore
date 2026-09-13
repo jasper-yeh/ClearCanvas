@@ -63,3 +63,5 @@ ImageServer/Web/Application/Pages/Help/UsersGuide/*
 
 # Files for Github integration
 ReferencedAssemblies
+
+dotnet/
