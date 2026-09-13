@@ -116,6 +116,7 @@
     <Compile Include="DicomAttributeCollection.cs" />
     <Compile Include="DicomAttributeSingleValueText.cs" />
     <Compile Include="DicomAttributeSQ.cs" />
+    <Compile Include="DicomSettings.cs" />
     <Compile Include="DicomTagsLegacy.cs" />
     <Compile Include="DicomUids.cs" />
     <Compile Include="DicomUidsLegacy.cs" />
